@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.image-generator{
+    background: url("Image.jpg");
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+}
+.image-generator::before {
+    content:"";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 40vh;
+    background: #121211;
+    opacity: 0.5;
+}
+
+.image-generator .content {
+    max-width: 760px;
+    font-weight: 600;
+    color: white;
+    padding: 0 15px;
+    position:relative;
+    text-align: center;
+
+}
+
+.image-generator h1{
+    font-size:2.5rem;
+    font-weight:900;
+    text-align: center;
+
+}
+
+.image-generator .generate-form{
+    height: 56px;
+    width : 100%;
+    background: #fff;
+    border-radius:30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.generate-form .prompt-input{
+   width: 100%;
+   border: none;
+   outline: none;
+   font-size: 1rem;
+   background:none;
+   padding: 0 17px;
+}
+
+.generate-form .image-quantity{
+    outline:none;
+    border : none;
+    background: none;
+    font-size:1rem;
+    margin-right: 15px;
+
+
+}
+
+.generate-form .generate-btn{
+    font-size:1rem;
+    outline:none;
+    border:none;
+    color:#fff;
+    font-weight: 500;
+    padding: 0 25px;
+    margin-right: 5px;
+    cursor:pointer;
+    border-radius: 30px;
+    background: #4949e7;
+    height:50px;
+}
+
+.image-gallery{
+    display:flex;
+    gap:15px;
+    padding:0 15px;
+    margin:50px auto;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.image-gallery .img-card{
+    width:285px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 9px;
+    overflow: hidden;
+    position:relative;
+}
+
+.image-gallery .img-card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
+.image-gallery .img-card .download-btn{
+position: absolute;
+bottom: 15px;
+right: 15px;
+background: #fff;
+height:36px;
+width:36px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content:center;
+display: none;
+flex-wrap: wrap;
+}
+
+.image-gallery .img-card:not(.loading):hover .download-btn{
+    display:flex;
+    transition: ease-in-out;
+}
+
+.image-gallery .img-card .download-btn img{
+    width:14px;
+    height:14px;
+}
+
+.image-gallery .img-card.loading img{
+    height: 80px;
+    width: 80px;
+    object-fit:contain;
+}
+
+
+.image-gallery .img-card.loading{
+    background-color: rgb(243, 239, 239);
+}

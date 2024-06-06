@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-image-generation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+     <section class="image-generator">
+        <div class="content">
+            <h1>AI powered image generator javascript tool</h1>
+            <p>This an AI powered javascript tool which generated image using open AI API just like DALL.E amd midjourney</p>
+            <form action="#" class="generate-form">
+                <input type="text" class="prompt-input" placeholder="what do you want to generate - Think off!" required>
+                <div class="controls d-flex">
+                    <select class="image-quantity">
+                       <option value="1">1 image</option>       
+                       <option value="2">2 images</option>           
+                       <option value="3">3 images</option>         
+                       <option value="4">4 images</option>       
+                    </select>
+                    <button type="submit" class="generate-btn">Generate</button>
+                </div>
+            </form>
+        </div>
+     </section>
+     <section class="image-gallery">
+        <div class = "img-card">
+            <img src = "Image.jpg" alt="image">
+            <a href="#" class="download-btn">
+                <img src = "download.png" alt="download-icon">
+            </a>
+        </div>
+
+        <div class = "img-card loading">
+            <img src = "loading.svg" alt="loading">
+        </div>
+
+
+        <div class = "img-card">
+            <img src = "Image.jpg" alt="image">
+            <a href="#" class="download-btn">
+                <img src = "download.png" alt="download-icon">
+            </a>
+        </div>
+
+
+        <div class = "img-card">
+            <img src = "Image.jpg" alt="image">
+            <a href="#" class="download-btn">
+                <img src = "download.png" alt="download-icon">
+            </a>
+        </div>
+     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
